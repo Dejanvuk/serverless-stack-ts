@@ -1,0 +1,103 @@
+{
+  "name": "todo-app",
+  "version": "1.0.0",
+  "description": "Typescript version for the frontend at https://serverless-stack.com/",
+  "main": "src/index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Dejanvuk/serverless-stack-ts.git"
+  },
+  "keywords": [
+    "serverless",
+    "aws"
+  ],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Dejanvuk/serverless-stack-ts/issues"
+  },
+  "homepage": "Dejanvuk.github.io/serverless-stack-ts",
+  "dependencies": {
+    "@sentry/browser": "^5.29.2",
+    "@stripe/react-stripe-js": "^1.1.2",
+    "@stripe/stripe-js": "^1.11.0",
+    "amazon-cognito-identity-js": "^4.5.6",
+    "aws-amplify": "^3.3.7",
+    "core-js": "^3.6.5",
+    "react": "^16.13.1",
+    "react-bootstrap": "^1.4.0",
+    "react-dom": "^16.13.1",
+    "react-icons": "^3.11.0",
+    "react-router-bootstrap": "^0.25.0",
+    "react-router-dom": "^5.2.0",
+    "regenerator-runtime": "^0.13.7",
+    "web-vitals": "^1.0.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.11.6",
+    "@babel/plugin-proposal-class-properties": "^7.10.4",
+    "@babel/plugin-proposal-decorators": "^7.10.5",
+    "@babel/plugin-transform-runtime": "^7.11.5",
+    "@babel/preset-env": "^7.11.5",
+    "@babel/preset-react": "^7.10.4",
+    "@babel/preset-typescript": "^7.10.4",
+    "@types/jest": "^26.0.15",
+    "@types/react-bootstrap": "^0.32.25",
+    "@types/react-dom": "^16.9.8",
+    "@types/react-icons": "^3.0.0",
+    "@types/react-router-bootstrap": "^0.24.5",
+    "@types/react-router-dom": "^5.1.7",
+    "@types/webpack-env": "^1.15.3",
+    "@typescript-eslint/eslint-plugin": "4.1.1",
+    "@typescript-eslint/parser": "4.1.1",
+    "babel-loader": "^8.1.0",
+    "css-loader": "^4.3.0",
+    "eslint": "^7.9.0",
+    "eslint-config-airbnb-typescript": "^10.0.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-import-resolver-typescript": "^2.3.0",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-jsx-a11y": "^6.3.1",
+    "eslint-plugin-prettier": "^3.1.4",
+    "eslint-plugin-react": "^7.20.6",
+    "eslint-plugin-react-hooks": "^4.1.2",
+    "file-loader": "^6.1.0",
+    "fork-ts-checker-webpack-plugin": "^5.2.0",
+    "gh-pages": "^3.1.0",
+    "html-webpack-plugin": "^4.4.1",
+    "install": "^0.13.0",
+    "jest": "^26.6.3",
+    "npm": "^6.14.8",
+    "prettier": "^2.1.2",
+    "react-hot-loader": "^4.12.21",
+    "style-loader": "^1.2.1",
+    "ts-jest": "^26.4.4",
+    "typescript": "^4.0.3",
+    "webpack": "^4.44.2",
+    "webpack-cli": "^3.3.12",
+    "webpack-dev-server": "^3.11.0"
+  },
+  "scripts": {
+    "start": "webpack-dev-server --open --port 3000 --compress --mode development --host 0.0.0.0",
+    "dev": "webpack --mode development --progress",
+    "build": "webpack --mode production --progress",
+    "lint": "eslint './src/**/*.{ts,tsx}'",
+    "lint-all": "npx eslint . --ext .js,.jsx,.ts,.tsx",
+    "lint-fix": "eslint . --ext .tsx,.ts --fix",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
+    "test": "jest --watch"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}
